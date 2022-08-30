@@ -1,5 +1,5 @@
-#FirstConsoleApp
+# FirstConsoleApp
 
-##Description
+## Description
 
 Solution for a salary calculation
