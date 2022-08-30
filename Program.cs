@@ -12,11 +12,13 @@ static int sumAllFees(int incomeTaxSum, int socialInsuranceSum, int additionalMe
 Console.WriteLine("Enter employee's first name and last name: ");
 
 // FIXME: Check value for empty string
+
 String? employeeFNLN;
 
 employeeFNLN = Console.ReadLine();
 
 // TODO: Check empty first name and empty last name
+
 string[] fnlnArr = employeeFNLN!.Split(" ");
 
 Console.WriteLine("Enter income: ");
