@@ -13,23 +13,31 @@ namespace FirstConsoleApp
         int numberOfPassedExams;
 
 
-        public Employee(string fn, string ln, int eY, int nopex) {
+        public Employee(string fn, string ln, int eY, int nopex)
+        {
             this.firstName = fn;
             this.lastName = ln;
             this.experienceYears = eY;
             this.numberOfPassedExams = nopex;
         }
 
-    public int getIncomeSum(int startIncome) {
-        int resultIncome = startIncome; 
-        if (this.experienceYears > 5) {
-            resultIncome = startIncome + startIncome / 100 * 10;
-        }
-        if (this.numberOfPassedExams > 10) {
-            resultIncome = resultIncome / 100 * 15;
-        }
+        public int getIncomeSum(int startIncome)
+        {
+            if (startIncome <= 0)
+            {
+                return -1;
+            }
+            int resultIncome = startIncome;
+            if (this.experienceYears > 5)
+            {
+                resultIncome = startIncome + startIncome / 100 * 10;
+            }
+            if (this.numberOfPassedExams > 10)
+            {
+                resultIncome = resultIncome / 100 * 15;
+            }
 
-        return resultIncome;
-    }
+            return resultIncome;
+        }
     }
 }
