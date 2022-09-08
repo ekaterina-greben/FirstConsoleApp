@@ -28,13 +28,21 @@ namespace FirstConsoleApp
                 return -1;
             }
             int resultIncome = startIncome;
+            if (this.experienceYears < 0)
+            {
+                return -1;
+            }
             if (this.experienceYears > 5)
             {
                 resultIncome = startIncome + startIncome / 100 * 10;
             }
+             if (this.numberOfPassedExams <= 0)
+            {
+                return -1;
+            }
             if (this.numberOfPassedExams > 10)
             {
-                resultIncome = resultIncome / 100 * 15;
+                resultIncome = resultIncome + resultIncome/ 100 * 15;
             }
 
             return resultIncome;
